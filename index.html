@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <script src="lib/p5/p5.js"></script>
+  <!-- <script src="lib/p5/addons/p5.sound.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/[p5_version]/p5.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css"
+    integrity="sha512-3q8fi8M0VS+X/3n64Ndpp6Bit7oXSiyCnzmlx6IDBLGlY5euFySyJ46RUlqIVs0DPCGOypqP8IRk/EyPvU28mQ=="
+    crossorigin="anonymous" />
+
+  <meta charset="utf-8" />
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js"
+    integrity="sha512-f0VlzJbcEB6KiW8ZVtL+5HWPDyW1+nJEjguZ5IVnSQkvZbwBt2RfCBY0CBO1PsMAqxxrG4Di6TfsCPP3ZRwKpA=="
+    crossorigin="anonymous"></script>
+
+
+
+  <script src="byurd.js"></script>
+  <script src="sketch.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm">
+        <div id='byurdPen'></div>
+      </div>
+
+      <div class="col-">
+        <div class="card" style="width: 18rem;">
+
+          <div class="card-body">
+            <h5 class="card-title">Options</h5>
+
+            <div class="card-text">
+
+              Neighborhood radius
+              <input id="neighborRadiusSlider" class="sliders" type="number" data-slider-min=0 data-slider-max=800
+                data-slider-step=1 data-slider-value=40 />
+
+              Alignment force strength
+              <input id="alignmentSlider" class="sliders" type="number" data-slider-min=0 data-slider-max=5
+                data-slider-step=0.1 data-slider-value=.5 />
+
+              Cohesion force strength
+              <input id="cohesionSlider" class="sliders" type="number" data-slider-min=0 data-slider-max=5
+                data-slider-step=0.1 data-slider-value=.5 />
+
+              Separation force strength
+              <input id="separationSlider" class="sliders" type="number" data-slider-min=0 data-slider-max=5
+                data-slider-step=0.1 data-slider-value=.5 />
+
+              Chonk
+              <input id="fatnessSlider" class="sliders" type="text" data-slider-min="0.5" data-slider-max="10"
+                data-slider-step="0.1" data-slider-value="1.5" />
+
+              Edge behavior
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="edgeBehavior" class="edgeBehavior" id="wrap" checked> Wrap
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="edgeBehavior" class="edgeBehavior" id="bounce"> Bounce
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="edgeBehavior" class="edgeBehavior" id="turn"> Turn
+                </label>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="misc.js"></script>
+</body>
+
+</html>
